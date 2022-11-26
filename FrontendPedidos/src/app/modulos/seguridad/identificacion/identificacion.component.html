@@ -1,0 +1,32 @@
+<div class="form">
+           
+      <div class="tab-content">
+                
+        <div id="login">   
+          <h3>Bienvenido, Iniciar Sesión</h3 >
+          
+          <form [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()" action="/" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Correo<span class="req">*</span>
+            </label>
+            <input formControlName="usuario" type="email"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Clave<span class="req">*</span>
+            </label>
+            <input formControlName="clave" type="password"required autocomplete="off"/>
+          </div>
+                  
+          <button [disabled]="!fgValidador.valid" class="btn btn-primary button-block" type="submit">Iniciar Sesión</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->

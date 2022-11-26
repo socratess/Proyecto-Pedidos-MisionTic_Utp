@@ -1,0 +1,17 @@
+<a routerLink="/pedidos/asignar-pedido" class="btn purple">Registrar Pedido</a>
+<table class="table responsive" id="tablaconsultausuario">
+<thead><tr>
+     <th>Producto Id</th>
+      <th>Cantidad</th>
+        <th>Total</th>
+         <th>Estado</th>
+</thead>
+<tbody>
+    <tr *ngFor='let u of listadoPedidos'>
+<td>{{u.productoId}}</td>
+<td>{{u.cantidad}}</td>
+<td>{{u.total}}</td>
+<td>{{u.estado}}</td>
+    </tr>
+</tbody>
+</table>

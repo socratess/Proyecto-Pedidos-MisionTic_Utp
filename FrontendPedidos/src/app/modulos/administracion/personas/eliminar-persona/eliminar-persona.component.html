@@ -1,0 +1,54 @@
+<section class="container">
+    <div class="row">
+        <h2 class="center-align" style="margin-top: 50px; margin-bottom: 80px">
+            Eliminar Persona
+        </h2>
+        <article class="col s6 offset-s3">
+            <form
+                [formGroup]="fgValidador"
+                (ngSubmit)="EliminarUsuario()"
+                method="POST"
+                action="formulario-contacto.php">
+                <input type="hidden" formControlName="id" />
+                
+                <div class="input-field">
+                    <label for="nombres" class="active">Nombres</label>
+                    <input formControlName="nombres" type="text" name="nombres"
+                        readonly />
+                </div>
+
+                <div class="input-field">
+                    <label for="apellidos" class="active">Apellidos</label>
+                    <input
+                        formControlName="apellidos"
+                        type="text"
+                        name="apellidos"
+                        readonly
+                        />
+                </div>
+                <div class="input-field">
+                    <label for="correo" class="active">Correo Electrónico</label>
+                    <input formControlName="correo" type="email" name="correo"
+                        readonly />
+                </div>
+                <div class="input-field">
+                    <label for="celular" class="active">Celular</label>
+                    <input
+                        formControlName="celular"
+                        type="text"
+                        name="celular"
+                        readonly
+                        />
+                </div>
+                <p class="center-align">
+                    <button
+                        [disabled]="!fgValidador.valid"
+                        class="waves-effect waves-light btn green"
+                        type="submit">
+                        <i class="material-icons right">send</i>Eliminar
+                    </button>
+                </p>
+            </form>
+        </article>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+<section class="container">
+    <div class="row">
+        <h2 class="center-align" style="margin-top: 50px; margin-bottom: 80px">
+            Editar Clave
+        </h2>
+        <article class="col s6 offset-s3">
+            <form
+                [formGroup]="fgValidador"
+                (ngSubmit)="EditarClaveUsuario()"
+                method="POST"
+                action="formulario-contacto.php">
+                <input type="hidden" formControlName="id" />
+                <input type="hidden" formControlName="nombres"/>
+                    <input type="hidden"
+                        formControlName="apellidos"                       
+                        />                   
+                    <input type="hidden" formControlName="correo"
+                         />        
+                    <input type="hidden"
+                        formControlName="celular"
+                        
+                        />
+              
+                <div class="input-field">
+                    <label for="clave" class="active">Clave</label>
+                    <input 
+                        formControlName="clave"
+                        type="text"
+                        name="clave"
+                        />
+                </div>
+                <p class="center-align">
+                    <button
+                        [disabled]="!fgValidador.valid"
+                        class="waves-effect waves-light btn green"
+                        type="submit">
+                        <i class="material-icons right">send</i>Editar
+                    </button>
+                </p>
+            </form>
+        </article>
+    </div>
+</section>

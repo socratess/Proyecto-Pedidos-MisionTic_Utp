@@ -1,0 +1,21 @@
+<a routerLink="/administracion/crear-persona" class="btn purple">Nuevo Usuario</a>
+<table class="table responsive" id="tablaconsultausuario">
+<thead><tr>
+     <th>nombres</th>
+      <th>apellidos</th>
+        <th>correo</th>
+         <th>celular</th>
+         <th>Editar</th>
+        <th>Eliminar</th></tr>
+</thead>
+<tbody>
+    <tr *ngFor='let u of listadoUsuarios'>
+<td>{{u.nombres}}</td>
+<td>{{u.apellidos}}</td>
+<td>{{u.correo}}</td>
+<td>{{u.celular}}</td>
+<td><a routerLink="/administracion/editar-persona/{{u.id}}" class="btn green">Editar Persona</a></td>
+<td><a routerLink="/administracion/eliminar-persona/{{u.id}}" class="btn red">Eliminar Persona</a></td>
+    </tr>
+</tbody>
+</table>
